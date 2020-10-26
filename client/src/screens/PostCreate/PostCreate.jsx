@@ -46,16 +46,16 @@ function PostCreate(props) {
                     className="input-image"
                     placeholder='Image URL'
                     value={post.imgURL}
-                    name='img'
+                    name='imgURL'
                     required
                     onChange={handleChange}
                 />
                 <textarea
                     className="textarea-description"
                     rows={10}
-                    placeholder='Description'
+                    placeholder='Content'
                     value={post.content}
-                    name='description'
+                    name='content'
                     required
                     onChange={handleChange}
                 />
