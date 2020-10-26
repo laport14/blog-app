@@ -1,11 +1,16 @@
-import React from 'react';
+import React from 'react'
+import './Home.css'
+import PostCards from '../../components/PostCards/PostCards'
+import Layout from '../../components/shared/Layout/Layout'
 
-function Home(props) {
+const Home = () => {
   return (
-    <div>
-      
-    </div>
-  );
+    <Layout>
+      <div className="home">
+        <PostCards />
+      </div>
+    </Layout>
+  )
 }
 
-export default Home;
+export default Home
