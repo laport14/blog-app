@@ -46,7 +46,7 @@ const PostEdit = (props) => {
     <Layout>
             <div className="post-edit">
                 <div className="image-container">
-                    <img className="edit-post-image" src={post.imgURL} alt={post.name} />
+                    <img className="edit-post-image" src={post.imgURL} alt={post.title} />
                     <form onSubmit={handleSubmit}>
                         <input
                             className="edit-input-image-link"
@@ -61,18 +61,18 @@ const PostEdit = (props) => {
                 <form className="edit-form" onSubmit={handleSubmit}>
                     <input
                         className="input-name"
-                        placeholder='Name'
-                        value={post.name}
-                        name='name'
+                        placeholder='Title'
+                        value={post.title}
+                        name='title'
                         required
                         autoFocus
                         onChange={handleChange}
                     />
                     <input
                         className="input-price"
-                        placeholder='Price'
-                        value={post.price}
-                        name='price'
+                        placeholder='Author'
+                        value={post.author}
+                        name='author'
                         required
                         onChange={handleChange}
                     />
@@ -80,9 +80,9 @@ const PostEdit = (props) => {
                         className="textarea-description"
                         rows={10}
                         cols={78}
-                        placeholder='Description'
-                        value={post.description}
-                        name='description'
+                        placeholder='Content'
+                        value={post.content}
+                        name='content'
                         required
                         onChange={handleChange}
                     />
