@@ -5,7 +5,7 @@ let apiUrl
 
 const apiUrls = {
   //need to change the URL below for production environment
-    production: 'https://bog-post-application-group6.herokuapp.com/', 
+    production: 'https://bog-post-application-group6.herokuapp.com/api', 
     development: 'http://localhost:3000/api'
 }
 
