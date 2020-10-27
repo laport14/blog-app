@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from './screens/Home/Home'
-import Posts from './screens/Posts/Posts'
-import PostCreate from './screens/PostCreate/PostCreate'
-import PostEdit from './screens/PostEdit/PostEdit'
-import PostDetail from './screens/PostDetail/PostDetail'
+import Home from "./screens/Home/Home";
+import Posts from "./screens/Posts/Posts";
+import PostCreate from "./screens/PostCreate/PostCreate";
+import PostEdit from "./screens/PostEdit/PostEdit";
+import PostDetail from "./screens/PostDetail/PostDetail";
 import "./App.css";
 
 function App() {

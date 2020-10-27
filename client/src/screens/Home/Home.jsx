@@ -1,7 +1,7 @@
-import React from 'react'
-import './Home.css'
-import PostCards from '../../components/PostCards/PostCards'
-import Layout from '../../components/shared/Layout/Layout'
+import React from "react";
+import "./Home.css";
+import PostCards from "../../components/PostCards/PostCards";
+import Layout from "../../components/shared/Layout/Layout";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         <PostCards />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
