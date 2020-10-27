@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './PostDetail.css'
 import Layout from '../../components/shared/Layout/Layout'
 import { getPost, deletePost } from '../../services/posts'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Redirect } from 'react-router-dom'
 
 const PostDetail = (props) => {
   
   const [post, setPost] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
+  const [isDeleted, setIsDeleted] = useState(false)
   const { id } = useParams()
 
   useEffect(() => {
@@ -22,6 +23,13 @@ const PostDetail = (props) => {
   if (!isLoaded) {
     return <h1>Chill I'm Loading</h1>
   }
+  if (isDeleted) {
+    return <Redirect to={'/posts'} />
+  }
+  const handleDelete = async () => {
+    await deletePost(post._id)
+    setIsDeleted(!isDeleted)
+  }
 
   return (
     <Layout>
@@ -33,7 +41,7 @@ const PostDetail = (props) => {
           <div className="author">By: {post.author}</div>
           <div className="container">
             <Link className="edit-link" to={`/posts/${post._id}/edit`}><button className="edit-button">Edit</button></Link>
-            <button className="delete-button" onClick={() => deletePost(post._id)}>Delete</button>
+            <button className="delete-button" onClick={handleDelete}>Delete</button>
           </div>
         </div>
       </div>

@@ -54,7 +54,8 @@
   display: block;
 }
 
-.edit-link {
+.edit-link,
+.delete-link {
   color: white;
 }
 
